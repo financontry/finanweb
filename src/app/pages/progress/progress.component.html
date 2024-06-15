@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Progres Bar </h4>
+                <!-- clase progress-->
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-primary progress-bar-striped active" 
+                    style="height:5px;" 
+                    [style.width]="progreso1+ '%'"
+                    role="progressbar" > 
+                    <!---->
+                </div>
+                </div> 
+                <!-- fin clase progress-->
+
+                <!-- clase progress-->
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active" 
+                    style="height:5px;" 
+                    [style.width]="progreso2+ '%'"
+                    role="progressbar" > 
+                    <!--[style.width]="progreso+ '%'"-->
+                </div>
+                </div>
+                <!-- fin clase progress-->
+
+            </div>
+        </div>
+   </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+               <!-- inicio de incrementador-->
+               <app-incrementador (valorSalida)="progreso1=$event" 
+                                  [progreso]="progreso1">
+                </app-incrementador>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <!-- inicio de incrementador-->
+                <app-incrementador
+                    (valorSalida)="progreso2=$event" 
+                    [progreso]="progreso2"
+                    [btnClass]="'btn-info'">
+                </app-incrementador>
+            </div>
+        </div>
+    </div>
+
+</div>

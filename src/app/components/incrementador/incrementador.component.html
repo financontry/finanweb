@@ -1,0 +1,29 @@
+<div class="input-group">
+    <span class="input-group-btn">
+         <button class="btn btn-primary" 
+                 (click)="cambiarValor(-5) +'%'" 
+                 [ngClass]="btnClass"
+                 type="button">
+            <i class="fa fa-munus" ></i>
+        </button>
+     </span>
+
+    <input type="number" 
+            class="form-control" 
+            min="0"
+            max="100"
+            [ngClass]="{'is-valid': progreso >100 || progreso <0 }"
+            (ngModelChange)="onChange($event)"
+            placeholder="Progreso"
+            [(ngModel)]="progreso">
+
+    <span class="input-group-btn">
+        <button class="btn btn-primary" 
+                (click)="cambiarValor(+5) +'%'"
+                [ngClass]="btnClass"
+                type="button">
+            <i class="fa fa-plus" ></i>
+         </button>
+    </span>
+</div>                        
+
