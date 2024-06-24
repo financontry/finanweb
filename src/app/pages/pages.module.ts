@@ -14,6 +14,11 @@ import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProveflorComponent } from './mantenimientos/proveflor/proveflor.component';
+import { EspecieComponent } from './mantenimientos/especie/especie.component';
+import { VariedadComponent } from './mantenimientos/variedad/variedad.component';
 
 
 
@@ -25,7 +30,12 @@ import { AccountSettingComponent } from './account-setting/account-setting.compo
     ProgressComponent,
     Grafica1Component ,
     PagesComponent,
-    AccountSettingComponent
+    AccountSettingComponent,
+    PromesasComponent,
+    RxjsComponent,
+    ProveflorComponent,
+    EspecieComponent,
+    VariedadComponent
   ],
   exports:[
     DashboardComponent ,

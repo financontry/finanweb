@@ -6,18 +6,30 @@ import { ProgressComponent } from "./progress/progress.component";
 import { Grafica1Component } from "./grafica1/grafica1.component";
 import { PagesComponent } from "./pages/pages.component";
 import { AccountSettingComponent } from "./account-setting/account-setting.component";
+import { PromesasComponent } from "./promesas/promesas.component";
+import { RxjsComponent } from "./rxjs/rxjs.component";
+
+//manteniminetos
+import { ProveflorComponent } from "./mantenimientos/proveflor/proveflor.component";
 
 const routes :Routes=[
 
    //definir las rutas hijas internamente
   { 
     path:'',
-    component: PagesComponent,
+    component: PagesComponent, 
     children:[
-        { path:'dashboard', component:DashboardComponent}, //lugar vacio
-        { path:'progress', component: ProgressComponent } ,
-        { path:'grafica1', component: Grafica1Component },
-        { path:'account-settings', component: AccountSettingComponent },
+        { path:'dashboard', component:DashboardComponent,data:{titulo:'Dashboard'}}, //lugar vacio
+        { path:'progress', component: ProgressComponent ,data:{titulo:'Progress'}} ,
+        { path:'grafica1', component: Grafica1Component ,data:{titulo:'grafica1'}},
+        { path:'account-settings', component: AccountSettingComponent,data:{titulo:'accoun'} },
+        { path:'promesas', component: PromesasComponent,data:{titulo:'promesas'} },
+        { path:'rxjs', component: RxjsComponent ,data:{titulo:'rxjs'}},
+
+        //mantenimientos
+        // el nombre en path debe ser igual an sidebar.service.ts el url
+        { path:'proveflor', component: ProveflorComponent ,data:{titulo:'Proveedor de Flor'}},
+
         //para el path vacio
         { path:'',redirectTo: '/dashboard' , pathMatch:'full'},
   
